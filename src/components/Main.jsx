@@ -164,7 +164,7 @@ const Main = () => {
                         <div className="single-item__texts">
                             <div className="single-item__2lines">
                                 <p className="single-item__title">
-                                    Amo Noite E Dia - Live In São paulo / 2010
+                                    Amo Noite E Dia - Live In São Paulo / 2010
                                 </p>
                             </div>
                             <p className="single-item__type">Artista</p>
@@ -233,7 +233,7 @@ const Main = () => {
                             <p className="single-item__type">Artista</p>
                         </div>
                     </div>
-                    
+
                     <div className="single-item">
                         <div className="single-item__div-image-button">
                             <div className="single-item__div-image">

@@ -1,12 +1,24 @@
 import Header from "./components/Header"
-import Main from "./components/Main"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
+import Artists from "./pages/Artists"
+import Artist from "./pages/Artist"
+import Songs from "./pages/Songs"
+import Song from "./pages/Song"
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <Main />
-    </>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Artists" element={<Artists />} />
+        <Route path="/Artist/:id" element={<Artist />} />
+        <Route path="/Songs" element={<Songs />} />
+        <Route path="/Song/:id" element={<Song />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

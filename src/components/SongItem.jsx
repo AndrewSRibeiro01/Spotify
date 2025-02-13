@@ -10,7 +10,8 @@ const SongItem = ({ image, name, duration, artist, audio, id, index }) => {
                 <div className="song-item__album">
 
                     <img className="song-item__image"
-                        src={image} alt={name} />
+                        src={image}
+                        alt={name} />
 
                     <p className="song-item__name">{name}</p>
                 </div>

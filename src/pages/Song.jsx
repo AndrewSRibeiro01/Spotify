@@ -6,39 +6,59 @@ import { artistArray } from "../assets/database/artists";
 const Song = () => {
     const { id } = useParams();
 
-    const obj = songsArray.filter(
+    const { image, name, duration, artist, audio } = songsArray.filter(
         (currentSongObj) => currentSongObj.id === Number(id)
+    )[0];
+
+    const artistObj = artistArray.filter(
+        (currentArtistObj) => currentArtistObj.name === artist
+    )[0];
+
+    const songsArrayFromArtist = songsArray.filter(
+        (currentSongObj) => currentSongObj.artist === artist
     );
 
-    const artistId = artistArray.filter(
-        (currentArtistObj) => currentArtistObj.name === obj[0].artist
-    ).id;
+    const randomIndex = Math.floor(
+        Math.random() * (songsArrayFromArtist.length - 1)
+    );
+
+    const randomIndex2 = Math.floor(
+        Math.random() * (songsArrayFromArtist.length - 1)
+    );
+
+    const randomIdFromArtist = songsArrayFromArtist[randomIndex].id;
+    const randomId2FromArtist = songsArrayFromArtist[randomIndex2].id;
 
     return (
         <div type="song" >
             <div className="song__container">
                 <div className="song__image-container">
                     <img
-                        src={obj[0].image} alt={`Imagem da musica ${obj[0].name}`}
+                        src={image}
+                        alt={`Imagem da musica ${name}`}
                     />
                 </div>
             </div>
 
             <div className="song__bar">
-                <div className="song__artist-image">
-                    <Link to={`/artist/${artistId}`}>
-                        <img
-                            width={75}
-                            height={75}
-                            src={""} alt={""} />
-                    </Link>
-                </div>
+                <Link to={`/artist/${artistObj.id}`} className="song__artist-image">
+                    <img
+                        width={75}
+                        height={75}
+                        src={artistObj.image}
+                        alt={artistObj.name}
+                    />
+                </Link>
 
-                <Player />
+                <Player
+                    duration={duration}
+                    randomIdFromArtist={randomIdFromArtist}
+                    randomId2FromArtist={randomId2FromArtist}
+                />
 
                 <div>
-                    <p className="song__name">Do Job</p>
-                    <p>MC Tuto</p>
+                    <p className="song__name">{name}</p>
+                    <p>{artist}</p>
                 </div>
             </div>
         </div>

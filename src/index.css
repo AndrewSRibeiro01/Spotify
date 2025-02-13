@@ -343,6 +343,7 @@ img {
 }
 
 .song__container {
+  height: 75vh;
   margin: 0 20px;
   border-top-right-radius: 15px;
   background-image: linear-gradient(to bottom,

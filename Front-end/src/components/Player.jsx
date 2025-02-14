@@ -11,7 +11,7 @@ const formatTime = (timeInSeconds) => {
         .toString()
         .padStart(2, "0");
 
-    return `${minutes}: ${seconds}`
+    return `${minutes}:${seconds}`
 };
 
 const timeInSeconds = (timeString) => {

@@ -6,14 +6,15 @@ const Main = ({ type }) => {
     return (
         <div className="main">
             {type === "artists" || type === undefined ? (
-
-                <ItemList title="Artistas"
+                <ItemList
+                    title="Artistas"
                     items={10}
                     itemsArray={artistArray}
                     path='/artists'
                     idPath="/artist"
                 />) : (
-                <></>)}
+                <></>
+            )}
 
             {type === "songs" || type === undefined ? (
                 <ItemList

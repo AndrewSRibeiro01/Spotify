@@ -34,23 +34,16 @@ const Player = ({
   randomId2FromArtist,
   audio,
 }) => {
-  // const audioPlayer...
   const audioPlayer = useRef();
   const progressBar = useRef();
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(formatTime(0));
   const durationInSeconds = timeInSeconds(duration);
 
-  // console.log(durationInSeconds);
-
-  // função
-  // console.log(audioPlayer.current.play());
   const playPause = () => {
     isPlaying ? audioPlayer.current.pause() : audioPlayer.current.play();
 
     setIsPlaying(!isPlaying);
-
-    // console.log(formatTime(audioPlayer.current.currentTime));
   };
 
   useEffect(() => {
@@ -66,8 +59,6 @@ const Player = ({
 
     return () => clearInterval(intervalId);
   }, [isPlaying]);
-
-  // setIsPlaying(false)
 
   return (
     <div className="player">

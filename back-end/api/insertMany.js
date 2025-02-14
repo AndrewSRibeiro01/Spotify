@@ -1,23 +1,25 @@
-import { artistArray } from "../../Front-end/src/assets/database/artists.js"
-import { songsArray } from "../../Front-end/src/assets/database/songs.js"
+import { artistArray } from "../../front-end/src/assets/database/artists.js";
+import { songsArray } from "../../front-end/src/assets/database/songs.js";
 import { db } from "./connect.js";
 
 const newArtistArray = artistArray.map((currentArtistObj) => {
-    const newArtistObj = { ...currentArtistObj };
-    delete newArtistObj.id
+  const newArtistObj = { ...currentArtistObj };
+  delete newArtistObj.id;
 
-    return newArtistObj;
+  return newArtistObj;
 });
 
 const newSongsArray = songsArray.map((currentSongObj) => {
-    const newSongObj = { ...currentSongObj };
-    delete newSongObj.id
+  const newSongObj = { ...currentSongObj };
+  delete newSongObj.id;
 
-    return newSongObj;
+  return newSongObj;
 });
 
-const responseSongs = await db.collection("songs").insertMany(newSongsArray)
-const responseArtist = await db.collection("artists").insertMany(newArtistArray)
+const responseSongs = await db.collection("songs").insertMany(newSongsArray);
+const responseArtists = await db
+  .collection("artists")
+  .insertMany(newArtistArray);
 
-console.log(responseSongs)
-console.log(responseArtist)
+console.log(responseSongs);
+console.log(responseArtists);

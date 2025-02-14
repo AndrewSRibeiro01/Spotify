@@ -1,13 +1,21 @@
 {
-  "name": "spotify",
+  "name": "deploy",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm install --prefix back-end && npm install --prefix Front-end && npm run build --prefix Front-end",
+    "build": "npm install --prefix back-end && npm install --prefix front-end && npm run build --prefix front-end",
     "start": "npm run start --prefix back-end"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewSRibeiro01/Spotify.git"
+  },
   "keywords": [],
-  "author": "Andrew",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewSRibeiro01/Spotify/issues"
+  },
+  "homepage": "https://github.com/AndrewSRibeiro01/Spotify#readme",
+  "description": ""
 }

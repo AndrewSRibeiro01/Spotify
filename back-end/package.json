@@ -1,22 +1,21 @@
 {
   "name": "back-end",
   "version": "1.0.0",
-  "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node ./api/server.js",
-    "test": "node --watch ./api/server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
+  "type": "module",
   "dependencies": {
-    "connect": "^3.7.0",
     "cors": "^2.8.5",
+    "deploy": "file:..",
     "express": "^4.21.2",
     "mongodb": "^6.13.0",
-    "path": "^0.12.7",
-    "spotify": "file:.."
+    "path": "^0.12.7"
   }
 }

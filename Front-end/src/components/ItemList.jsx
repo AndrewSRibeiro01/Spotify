@@ -1,41 +1,46 @@
-import { Link, useLocation } from "react-router-dom"
-import SingleItem from "./SingleItem"
+import React from "react";
+import SingleItem from "./SingleItem";
+import { Link, useLocation } from "react-router-dom";
 
 const ItemList = ({ title, items, itemsArray, path, idPath }) => {
+  // console.log(items);
+  // console.log(useLocation());
+  const { pathname } = useLocation();
+  // console.log(pathname);
+  const isHome = pathname === "/";
+  const finalItems = isHome ? items : Infinity;
 
-    const { pathname } = useLocation()
+  return (
+    <div className="item-list">
+      <div className="item-list__header">
+        <h2>{title} populares</h2>
 
-    const isHome = pathname === '/'
-    const finalItems = isHome ? items : Infinity;
+        {isHome ? (
+          <Link to={path} className="item-list__link">
+            Mostrar tudo
+          </Link>
+        ) : (
+          <></>
+        )}
+      </div>
 
-    return (
-        <div className="item-list">
-            <div className="item-list__header">
-                <h2>{title} populares</h2>
-                {isHome ? (
-                    <Link to={path}
-                        className="item-list__link">
-                        Mostrar tudo
-                    </Link>
-                ) : (
-                    <></>
-                )}
+      <div className="item-list__container">
+        {itemsArray
+          .filter((currentValue, index) => index < finalItems)
+          .map((currObj, index) => (
+            <SingleItem
+              // id={currObj.id}
+              // name={currObj.name}
+              // image={currObj.image}
+              // banner={currObj.banner}
+              {...currObj}
+              idPath={idPath}
+              key={`${title}-${index}`}
+            />
+          ))}
+      </div>
+    </div>
+  );
+};
 
-            </div>
-
-            <div className="item-list__container">
-                {itemsArray
-                    .filter((currentValue, index) => index < finalItems)
-                    .map((item, index) => (
-                        <SingleItem
-                            idPath={idPath}
-                            {...item}
-                            key={`${title}-${index}`}
-                        />
-                    ))}
-            </div>
-        </div>
-    )
-}
-
-export default ItemList
+export default ItemList;

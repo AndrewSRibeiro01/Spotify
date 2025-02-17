@@ -17,8 +17,5 @@
     "url": "https://github.com/AndrewSRibeiro01/Spotify/issues"
   },
   "homepage": "https://github.com/AndrewSRibeiro01/Spotify#readme",
-  "description": "",
-  "devDependencies": {
-    "vite": "^0.10.3"
-  }
+  "description": ""
 }

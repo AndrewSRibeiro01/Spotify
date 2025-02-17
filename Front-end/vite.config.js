@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   build: {
     target: "esnext",
-    outDir: 'public',
+    outDir: 'dist',
   },
 });

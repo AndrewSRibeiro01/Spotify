@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npm install --prefix back-end && npm install --prefix front-end && npm run build --prefix front-end",
+    "build": "npm install --prefix back-end && npm install --prefix front-end && npm run build --prefix front-end && npm install -g vite",
     "start": "npm run start --prefix back-end"
   },
   "repository": {
@@ -17,8 +17,5 @@
     "url": "https://github.com/AndrewSRibeiro01/Spotify/issues"
   },
   "homepage": "https://github.com/AndrewSRibeiro01/Spotify#readme",
-  "description": "",
-  "devDependencies": {
-    "vite": "^6.1.0"
-  }
+  "description": ""
 }

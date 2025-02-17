@@ -19,6 +19,6 @@
   "homepage": "https://github.com/AndrewSRibeiro01/Spotify#readme",
   "description": "",
   "devDependencies": {
-    "vite": "^6.1.0"
+    "vite": "^0.10.3"
   }
 }

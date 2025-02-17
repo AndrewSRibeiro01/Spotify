@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npm install --prefix Front-end && npm run build --prefix Front-end",
+    "build": "npm install --prefix public && npm run build --prefix public",
     "start": "npm run start --prefix back-end"
   },
   "repository": {

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AndrewSRibeiro01/Spotify.git" 
+    "url": "git+https://github.com/AndrewSRibeiro01/Spotify.git"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +17,8 @@
     "url": "https://github.com/AndrewSRibeiro01/Spotify/issues"
   },
   "homepage": "https://github.com/AndrewSRibeiro01/Spotify#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "vite": "^6.1.0"
+  }
 }

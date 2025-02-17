@@ -1,5 +1,7 @@
-npm run build, 
-npm run start,
+npm run build
+
+npm run start
+
 Banco de dados mongoDB
 
 👇 Caso não queira clonar o projeto, pode baixar um video de demonstração 👇
